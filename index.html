@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Form -->
+    <section id="form-section">
+      <h2>Fill the Form to Generate Your Resume</h2>
+      <form id="resume-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Experience (Title, Company, Duration):</label>
+          <textarea id="experience" name="experience" placeholder="e.g. Front End Developer at WIGATECH SOLUTION, SEP 2024 - Present"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="education">Education (Degree, Institution, Year):</label>
+          <textarea id="education" name="education" placeholder="e.g. Bachelor's in Software Engineering, Sir Syed University, 2025"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Skills (HTML, JavaScript, React):</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g. HTML, CSS, JavaScript, React" required>
+        </div>
+
+        <button type="submit" class="generate-btn">Generate Resume</button>
+      </form>
+    </section>
+
+    <!-- Generated Resume -->
+    <section id="generated-resume" class="hidden">
+      <header class="header">
+        <img src="picture.jpg" alt="Profile Picture" class="profile-pic" id="profile-pic">
+        <h1 id="user-name">Your Name</h1>
+        <p class="contact-info">Email: <span id="user-email">your.email@example.com</span> | Phone: <span id="user-phone">1234567890</span></p>
+      </header>
+
+      <h2>Experience</h2>
+      <div id="user-experience"></div>
+
+      <h2>Education</h2>
+      <div id="user-education"></div>
+
+      <h2>Skills</h2>
+      <ul id="user-skills"></ul>
+
+      <div class="button-container">
+        <button id="edit-resume">Edit Resume</button>
+        <button id="download-pdf">Download PDF</button>
+        
+      </div>
+      
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
